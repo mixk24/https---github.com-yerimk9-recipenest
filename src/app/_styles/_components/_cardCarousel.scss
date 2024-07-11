@@ -1,0 +1,83 @@
+.gallery {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
+.container {
+  height: 6%;
+}
+
+.cards li {
+  list-style: none;
+  width: 30rem;
+  height: 40rem;
+  background-color: #d1d1d1;
+  text-align: center;
+  line-height: 35rem; /* 카드 높이에 맞춘 라인 높이 조정 */
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 20% 20% 200px; /* Adjusted to make the effect more curved */
+  transform: rotateY(calc(var(--i) * 36deg));
+
+  filter: brightness(50%);
+}
+.center-card {
+  filter: brightness(90%) !important;
+}
+
+.cardDesc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+
+  .center-card-text {
+    position: fixed;
+    bottom: 16%;
+    left: 50%;
+    transform: translate(-50%, -2%);
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .card-status {
+    position: fixed;
+    bottom: 11%;
+    left: 50%;
+    transform: translate(-50%, -12%);
+    font-size: 1rem;
+  }
+
+  label {
+    progress {
+      appearance: none;
+      vertical-align: -webkit-baseline-middle;
+      margin: 0 10px;
+    }
+
+    progress::-webkit-progress-bar {
+      background: #f0f0f1;
+      border: 1px solid #eeeeee;
+      height: 4px;
+      overflow: hidden;
+    }
+
+    progress::-webkit-progress-value {
+      background: gray;
+      height: 28px;
+      width: 48px;
+    }
+  }
+}

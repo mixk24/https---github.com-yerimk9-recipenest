@@ -1,0 +1,12 @@
+@import "./variables";
+@import "./mixins";
+@import "./reset";
+
+// components
+@import "./_components/cardCarousel";
+@import "./_components/infiniteTextFlow";
+@import "./_components/recipeContainer";
+@import "./_components/header";
+
+// pages
+@import "./_pages/recipePage";
